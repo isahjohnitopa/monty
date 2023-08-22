@@ -10,12 +10,12 @@
 
 #define _POSIX_C_SOURCE 200809L
 
-#define INSTRUCTIONS		\
-	{
-		{"push", push},	\
-		{"pall", pall},	\
-		{NULL, NULL}	\
-	}
+#define INSTRUCTIONS
+{
+	{"push", push},
+	{"pall", pall},
+	{NULL, NULL}
+}
 
 /**
  * struct stack_s - doubly linkedlist representation of a stack (or queue)
@@ -50,7 +50,7 @@ typedef struct instruction_s
 
 
 /**
- * struct help - argument for the current opcode
+ * struct help_s - argument for the current opcode
  * @data_struct: the stack mode, stack is set to be default
  * @argument: the argument of the string
  *
@@ -64,11 +64,13 @@ typedef struct help_s
 
 
 help_t global;
+int status = 0;
 
 
 /********************************************************/
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 
-
+void file_err(char *argv);
+void err_usuage(void);
 
 #endif /* MONTY_H */
