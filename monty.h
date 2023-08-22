@@ -66,6 +66,9 @@ typedef struct help_s
 help_t global;
 
 
+/********************************************************/
+void opcode(stack_t **stack, char *str, unsigned int line_cnt);
+
 
 
 #endif /* MONTY_H */
