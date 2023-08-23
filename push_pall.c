@@ -34,10 +34,11 @@ void push(stack_t **stack, unsigned int line_cnt)
 /**
  * pall - function that prints the stack
  * @stack: the stack head
+ * @line_cnt: the amount of lines
  *
  * Return: nothing
  */
-void pall(stack_t **stack)
+void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)))
 {
-	printf(*stack);
+	print_stack(*stack);
 }
