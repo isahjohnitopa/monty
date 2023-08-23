@@ -9,14 +9,12 @@
 #include <ctype.h>
 
 
-#define _POSIX_C_SOURCE 200809L
-
-#define INSTRUCTIONS
-{
-	{"push", push},
-	{"pall", pall},
-	{NULL, NULL}
-}
+#define INSTRUCTIONS \
+	{ \
+		{"push", push},	\
+		{"pall", pall},	\
+		{NULL, NULL}	\
+	}
 
 /**
  * struct stack_s - doubly linkedlist representation of a stack (or queue)
@@ -64,19 +62,18 @@ typedef struct help_s
 } help_t;
 
 
-help_t global;
-int status = 0;
-
+extern help_t global;
+ 
 
 /********************************************************/
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 
 void push(stack_t **stack, unsigned int line_cnt);
-void pall(stack_t **stack);
+void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
-void err_usuage(void);
+void err_usage(void);
 void free_stack(stack_t *stack);
 
 /******************************* utils file **************************/
