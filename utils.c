@@ -28,7 +28,7 @@ size_t print_stack(const stack_t *stack)
  *
  * Return: Returns newly created node, if creation fails - NULL
  */
-stack_t *add_node(stack_t **stack, const in n)
+stack_t *add_node(stack_t **stack, const int n)
 {
 	stack_t *new;
 
@@ -59,7 +59,7 @@ stack_t *add_node(stack_t **stack, const in n)
  *
  * Return: Returns the newly created node, if memory allocation fails - NULL
  */
-stack_t *queue_node(stack_t **stack, const in n)
+stack_t *queue_node(stack_t **stack, const int n)
 {
 	stack_t *new, *current = *stack;
 
