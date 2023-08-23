@@ -9,7 +9,7 @@
  */
 void file_err(char *argv)
 {
-	fprintf(strerr, "Error: Can't open file %s\n", argv);
+	fprintf(stderr, "Error: Can't open file %s\n", argv);
 	exit(EXIT_FAILURE);
 }
 
@@ -37,7 +37,7 @@ void err_usage(void)
 void free_stack(stack_t *stack)
 {
 	stack_t *current = stack;
-	stack_t next;
+	stack_t *next;
 
 	if (stack)
 	{
