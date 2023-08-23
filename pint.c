@@ -7,7 +7,7 @@
  *
  * Return: Nothing
  */
-void pint(stact_t **stack, unsigned int line_cnt)
+void pint(stack_t **stack, unsigned int line_cnt)
 {
 	if (!stack || !(*stack))
 	{
