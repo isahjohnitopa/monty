@@ -2,7 +2,6 @@
 
 #include "monty.h"
 
-int status = 0;
 help_t global;
 
 /**
@@ -14,6 +13,7 @@ help_t global;
  */
 int main(int ac, char **av)
 {
+	int status = 0;
 	FILE *file;
 	size_t buf_len = 0;
 	char *str = NULL, *buffer = NULL;
@@ -27,7 +27,7 @@ int main(int ac, char **av)
 	file = fopen(av[1], "r");
 	if (!file)
 		file_err(av[1]);
-	
+
 	while ((getline(&buffer, &buf_len, file)) != -1)
 	{
 		if (status)
