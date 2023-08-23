@@ -43,10 +43,54 @@ stack_t *add_node(stack_t **stack, const in n)
 	new->n = n;
 	new->next = *stack;
 	new->prev = NULL;
-	
+
 	if (*stack)
 		(*stack)->prev = new;
 
 	*stack = new;
+	return (new);
+}
+
+
+/**
+ * queue_node - add a node to a stack_t stack in queue_node
+ * @stack: the stack head
+ * @n: number of the node
+ *
+ * Return: Returns the newly created node, if memory allocation fails - NULL
+ */
+stack_t *queue_node(stack_t **stack, const in n)
+{
+	stack_t *new, *current = *stack;
+
+	new = malloc(sizeof(stack_t));
+	if (!new)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		free(new);
+		return (NULL);
+	}
+	new->n = n;
+
+	if (!*stack)
+	{
+		new->next = NULL;
+		new->prev = NULL;
+		*stack = new;
+		return (new);
+	}
+
+	while (current)
+	{
+		if (!current->next)
+		{
+			new->next = NULL;
+			new->prev = current;
+			current->next = new;
+			break;
+		}
+		current = current->next;
+	}
+
 	return (new);
 }
