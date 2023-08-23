@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stddef.h>
+#include <ctype.h>
 
 
 #define _POSIX_C_SOURCE 200809L
@@ -70,7 +71,10 @@ int status = 0;
 /********************************************************/
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 
+
+/******************** errors_and_free.c **********************/
 void file_err(char *argv);
 void err_usuage(void);
+void free_stack(stack_t *stack);
 
 #endif /* MONTY_H */

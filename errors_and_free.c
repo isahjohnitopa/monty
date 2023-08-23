@@ -26,3 +26,28 @@ void err_usage(void)
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
+
+
+/**
+ * free_stack - Function that free a linked list
+ * @stack: the list head
+ *
+ * Return: nothing
+ */
+void free_stack(stack_t *stack)
+{
+	stack_t *current = stack;
+	stack_t next;
+
+	if (stack)
+	{
+		next = stack->next;
+		while (current)
+		{
+			free(current);
+			current = next;
+			if (next)
+				next = next->next;
+		}
+	}
+}
