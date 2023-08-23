@@ -63,7 +63,7 @@ typedef struct help_s
 
 
 extern help_t global;
- 
+
 
 /********************************************************/
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
