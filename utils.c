@@ -94,3 +94,26 @@ stack_t *queue_node(stack_t **stack, const in n)
 
 	return (new);
 }
+
+
+/**
+ * is_digit - function that checks if a string is a digit
+ * @string: string to check
+ *
+ * Return: 1 if is digit, 0 otherwise
+ */
+int is_digit(char *string)
+{
+	if (!string || *string == '\0')
+		return (0);
+	if (*string == '-')
+		string++;
+
+	while (*string)
+	{
+		if (isdigit(*string) == 0)
+			return (0);
+		string++;
+	}
+	return (1);
+}
