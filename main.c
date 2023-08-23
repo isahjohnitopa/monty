@@ -1,5 +1,9 @@
+#define _POSIX_C_SOURCE 200809L
+
 #include "monty.h"
 
+int status = 0;
+help_t global;
 
 /**
  * main - The main entry point
@@ -13,7 +17,7 @@ int main(int ac, char **av)
 	FILE *file;
 	size_t buf_len = 0;
 	char *str = NULL, *buffer = NULL;
-	strack_t *stack = NULL;
+	stack_t *stack = NULL;
 	unsigned int line_cnt = 1;
 
 	global.data_struct = 1;
@@ -23,8 +27,8 @@ int main(int ac, char **av)
 	file = fopen(av[1], "r");
 	if (!file)
 		file_err(av[1]);
-
-	while ((getline(&buffer, &buf_len, file)) != (-1))
+	
+	while ((getline(&buffer, &buf_len, file)) != -1)
 	{
 		if (status)
 			break;
