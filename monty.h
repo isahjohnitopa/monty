@@ -77,4 +77,9 @@ void file_err(char *argv);
 void err_usuage(void);
 void free_stack(stack_t *stack);
 
+/******************************* utils file **************************/
+stack_t *queue_node(stack_t **stack, const int n);
+stack_t *add_node(stack_t **stack, const int n);
+size_t print_stack(const stack_t *stack);
+
 #endif /* MONTY_H */
