@@ -9,7 +9,7 @@
 size_t print_stack(stack_t *stack)
 {
 	size_t c = 0;
-	
+
 	while (stack)
 	{
 		printf("%d\n", stack->n);
