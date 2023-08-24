@@ -18,6 +18,7 @@
 		{"mul", _mul},	\
 		{"pop", pop}, \
 		{"swap", swap}, \
+		{"add", add}, \
 		{NULL, NULL}	\
 	}
 
@@ -81,6 +82,7 @@ void _mul(stack_t **stack, unsigned int line_cnt);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
+void add(stack_t **stack, unsigned int line_cnt);
 
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
