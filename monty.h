@@ -14,6 +14,7 @@
 		{"push", push},	\
 		{"pall", pall},	\
 		{"pint", pint},	\
+		{"pop", pop}, \
 		{NULL, NULL}	\
 	}
 
@@ -72,6 +73,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 void pint(stack_t **stack, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
+void pop(stack_t **stack, unsigned int line_cnt);
 
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
