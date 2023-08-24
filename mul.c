@@ -18,6 +18,6 @@ void _mul(stack_t **stack, unsigned int line_cnt)
 	}
 
 	result = ((*stack)->next->n) * ((*stack)->n);
-/*	pop(stack, line_cnt);*/
+	pop(stack, line_cnt);
 	(*stack)->n = result;
 }
