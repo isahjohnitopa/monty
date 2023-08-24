@@ -88,7 +88,7 @@ void free_stack(stack_t *stack);
 /******************************* utils file **************************/
 stack_t *queue_node(stack_t **stack, const int n);
 stack_t *add_node(stack_t **stack, const int n);
-size_t print_stack(const stack_t *stack);
+size_t print_stack(stack_t *stack);
 int is_digit(char *string);
 
 #endif /* MONTY_H */
