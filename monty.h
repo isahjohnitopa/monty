@@ -16,7 +16,11 @@
 		{"pint", pint},	\
 		{"div", _div},	\
 		{"mul", _mul},	\
-		{"pop", pop},	\
+		{"pop", pop}, \
+		{"swap", swap}, \
+		{"add", add}, \
+		{"sub", sub}, \
+		{NULL, nop}, \
 		{"mod", _mod},	\
 		{NULL, NULL}	\
 	}
@@ -81,7 +85,10 @@ void _div(stack_t **stack, unsigned int line_cnt);
 void _mul(stack_t **stack, unsigned int line_cnt);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 void pop(stack_t **stack, unsigned int line_cnt);
-
+void swap(stack_t **stack, unsigned int line_cnt);
+void add(stack_t **stack, unsigned int line_cnt);
+void nop(stack_t **stack, unsigned int line_cnt);
+void sub(stack_t **stack, unsigned int line_cnt);
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
 void err_usage(void);
