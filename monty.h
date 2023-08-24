@@ -13,7 +13,9 @@
 	{ \
 		{"push", push},	\
 		{"pall", pall},	\
-		{"pint", pint},\
+		{"pint", pint},	\
+		{"div", _div},	\
+		{"mul", _mul},	\
 		{NULL, NULL}	\
 	}
 
@@ -71,6 +73,9 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 
 void pint(stack_t **stack, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
+
+void _div(stack_t **stack, unsigned int line_cnt);
+void _mul(stack_t **stack, unsigned int line_cnt);
 void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 
 /******************** errors_and_free.c **********************/

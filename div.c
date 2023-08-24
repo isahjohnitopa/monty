@@ -23,7 +23,7 @@ void _div(stack_t **stack, unsigned int line_cnt)
 		exit(EXIT_FAILURE);
 	}
 	result = ((*stack)->next->n) / ((*stack)->n);
-	pop(stack, line_cnt);
+/*	pop(stack, line_cnt);*/
 	(*stack)->n = result;
 
 }
