@@ -13,7 +13,7 @@
 	{ \
 		{"push", push},	\
 		{"pall", pall},	\
-		{"pint", pint},	\
+		{"pint", pint},\
 		{NULL, NULL}	\
 	}
 
