@@ -20,7 +20,7 @@
 		{"swap", swap}, \
 		{"add", add}, \
 		{"sub", sub}, \
-		{"nop",, nop}, \
+		{"nop", nop}, \
 		{"mod", _mod},	\
 		{NULL, NULL}	\
 	}
