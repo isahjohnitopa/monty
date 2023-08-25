@@ -18,7 +18,7 @@ void rotl(stack_t **stack, unsigned int line_cnt)
 
 	while (right->next) /* move the right pointer to the last node */
 		right = right->next;
-	right-next = left; /* a circle infinite linked list loop */
+	right->next = left; /* a circle infinite linked list loop */
 	left->prev = right;
 	*stack = left->next; /* so we cut the link between 0 and 1 element */
 	(*stack)->prev->next = NULL;
