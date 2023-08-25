@@ -23,6 +23,7 @@
 		{"nop", nop},	\
 		{"mod", _mod},	\
 		{"pchar", pchar},\
+		{"pstr", pstr},	\
 		{NULL, NULL}	\
 	}
 
@@ -91,6 +92,7 @@ void add(stack_t **stack, unsigned int line_cnt);
 void nop(stack_t **stack, unsigned int line_cnt);
 void sub(stack_t **stack, unsigned int line_cnt);
 void pchar(stack_t **stack, unsigned int line_cnt);
+void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
 void err_usage(void);
