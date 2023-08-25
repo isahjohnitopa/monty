@@ -24,6 +24,7 @@
 		{"mod", _mod},	\
 		{"pchar", pchar},\
 		{"pstr", pstr},	\
+		{"rotl", rotl},	\
 		{NULL, NULL}	\
 	}
 
@@ -93,6 +94,7 @@ void nop(stack_t **stack, unsigned int line_cnt);
 void sub(stack_t **stack, unsigned int line_cnt);
 void pchar(stack_t **stack, unsigned int line_cnt);
 void pstr(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
+void rotl(stack_t **stack, unsigned int line_cnt);
 /******************** errors_and_free.c **********************/
 void file_err(char *argv);
 void err_usage(void);
