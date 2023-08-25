@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <ctype.h>
 
 /**
  * pchar - Function that prints the integer at the top as char
@@ -16,7 +15,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 		exit(EXIT_FAILURE);
 		return;
 	}
-	if (!isascii((*stack)->n))
+	if (((*stack)->n < 0) || ((*stack)->n > 127))
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
 		exit(EXIT_FAILURE);
